@@ -1,5 +1,7 @@
 # Identity and Access Management in LLM apps with Python, LangChain, and Pangea
 
+> This tutorial is also available on the [Pangea Documentation](https://pangea.cloud/docs/ai-security/langchain-python-rag-iam) website, where you can learn more about Pangea's services.
+
 In this tutorial, we will demonstrate how to implement Identity and Access Management (IAM) in a retrieval-augmented generation (RAG) application built with LangChain and Python, using Pangea security services.
 
 Integrating enterprise data into your generative AI app adds significant value. To use this information effectively, it must be embedded in vectors for semantic comparison. However, without clearly defined, deterministic security boundaries and strong authorization controls for the vectorized data, sensitive or restricted information may be inadvertently exposed. This can lead to risks outlined in OWASP's Top 10 for LLMs and Generative AI Apps, such as [LLM06: Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm06-sensitive-information-disclosure/), [LLM07: Insecure Plugin Design](https://genai.owasp.org/llmrisk/llm07-insecure-plugin-design/), [LLM08: Excessive Agency](https://genai.owasp.org/llmrisk/llm08-excessive-agency/), and [LLM10: Model Theft](https://genai.owasp.org/llmrisk/llm10-model-theft/). It can also hinder the ability to track, analyze, and prevent malicious attempts to manipulate LLM behavior through uncontrolled and unaccountable queries, as described in [LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
