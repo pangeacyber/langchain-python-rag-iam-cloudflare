@@ -4,19 +4,18 @@
 
 In this tutorial, we will demonstrate how to implement Identity and Access Management (IAM) in a retrieval-augmented generation (RAG) application built with LangChain and Python, using Pangea security services.
 
-Integrating enterprise data into your generative AI app adds significant value. To use this information effectively, it must be embedded in vectors for semantic comparison. However, without clearly defined, deterministic security boundaries and strong authorization controls for the vectorized data, sensitive or restricted information may be inadvertently exposed. This can lead to risks outlined in OWASP's Top 10 for LLMs and Generative AI Apps, such as [LLM06: Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm06-sensitive-information-disclosure/), [LLM07: Insecure Plugin Design](https://genai.owasp.org/llmrisk/llm07-insecure-plugin-design/), [LLM08: Excessive Agency](https://genai.owasp.org/llmrisk/llm08-excessive-agency/), and [LLM10: Model Theft](https://genai.owasp.org/llmrisk/llm10-model-theft/). It can also hinder the ability to track, analyze, and prevent malicious attempts to manipulate LLM behavior through uncontrolled and unaccountable queries, as described in [LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
+Integrating enterprise data into your generative AI app adds significant value. To use this information effectively, it must be embedded in vectors for semantic comparison. However, without clearly defined, deterministic security boundaries in the vectorized data and robust authorization controls, sensitive or restricted information may be inadvertently exposed. This can lead to risks outlined in OWASP's Top 10 for LLMs and Generative AI Apps, including [LLM06: Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm06-sensitive-information-disclosure/) and [LLM10: Model Theft](https://genai.owasp.org/llmrisk/llm10-model-theft/). Additionally, a lack of user authentication can hinder tracking, analyzing, and preventing malicious attempts to manipulate LLM behavior through unregulated and unaccountable queries, as described in [LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
 
 You will add authentication and authorization to a LangChain app, enabling the following capabilities:
 
 - Identify users and restrict access to the app and its resources.
-- Implement access control in a vector-based retrieval system by tagging vectors with resource-specific metadata at ingestion time and enforcing authorization policies that match this metadata.
-- Apply filtering logic to ensure only vectors aligned with the user’s permissions are retrieved at inference time.
+- Implement access control in a retrieval system by tagging vectors with resource-specific metadata at ingestion time and enforcing authorization policies aligned with this metadata.
+- Apply filtering logic to ensure only vectors matching the user’s permissions are retrieved at inference time.
 
 This, in turn, provides the following controls:
 
-- Enables tracking of user activity for monitoring, auditing, compliance, and forensic analysis (OWASP LLM01)
-- Enhances privacy and prevents accidental data leakage (OWASP LLM06, OWASP LLM01)
-- Restricts access to external tools used by the LLM (OWASP LLM07)
+- Enables tracking of user activity for monitoring, auditing, compliance, and forensic analysis (OWASP LLM01, LLM10)
+- Enhances privacy and prevents accidental data leakage (OWASP LLM06)
 
 ## Prerequisites
 
