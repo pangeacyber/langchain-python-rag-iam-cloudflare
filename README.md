@@ -59,7 +59,7 @@ In this tutorial, we use OpenAI models. Get your [OpenAI API key](https://platfo
    OPENAI_API_KEY="sk-proj-54bgCI...vG0g1M-GWlU99...3Prt1j-V1-4r0MOL...X6GMA"
    ```
 
-1. Open the provided Jupyter notebook, [langchain-python-inference-guardrails.ipynb](langchain-python-inference-guardrails.ipynb), and run the code examples in your Python environment.
+1. Open the provided Jupyter notebook, [langchain-python-rag-iam.ipynb](langchain-python-rag-iam.ipynb), and run the code examples in your Python environment.
 
    [Jupyter notebooks](https://jupyter.org/) provide a popular way to execute Python code interactively. You can [install Jupyter](https://jupyter.org/install) on your system or use an IDE extension.
 
