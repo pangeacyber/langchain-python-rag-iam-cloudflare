@@ -3,7 +3,6 @@ python-dotenv==1.0.1
 
 # Build an LLM app.
 langchain==0.3.4
-langchain-openai==0.2.3
 langchain-community==0.3.3
 
 # Add context from a vector store.

@@ -24,9 +24,9 @@ This, in turn, provides the following controls:
 - Python v3.10 or greater
 - pip v23.0.1 or greater
 
-### OpenAI API key
+### Cloudflare Workers AI Account
 
-In this tutorial, we use OpenAI models. Get your [OpenAI API key](https://platform.openai.com/api-keys) to run the examples.
+In this tutorial, we use LLM models offered by Cloudflare Workers AI. Signup for a free Cloudflare Workers account and get your [Cloudflare Workers API Key](https://dash.cloudflare.com/?to=/:account/ai/workers-ai/api-quick-start) to run the examples.
 
 ## Setup
 
@@ -52,11 +52,12 @@ In this tutorial, we use OpenAI models. Get your [OpenAI API key](https://platfo
 
 1. Save credentials and environment-specific settings as environment variables.
 
-   Create a `.env` file and add your OpenAI API key. Use the [.env.example](.env.example) file included in this repository as a template.
+   Create a `.env` file and add your Cloudflare Workers Account ID and API KEY. Use the [.env.example](.env.example) file included in this repository as a template.
 
    ```bash title=".env file"
-   # OpenAI
-   OPENAI_API_KEY="sk-proj-54bgCI...vG0g1M-GWlU99...3Prt1j-V1-4r0MOL...X6GMA"
+   # Cloudflare Workers AI
+   CLOUDFLARE_ACCOUNT_ID="..."
+   CLOUDFLARE_API_KEY="..."
    ```
 
 1. Open the provided Jupyter notebook, [langchain-python-rag-iam.ipynb](langchain-python-rag-iam.ipynb), and run the code examples in your Python environment.
